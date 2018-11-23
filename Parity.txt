@@ -1,0 +1,17 @@
+mov ecx,32 ; loop counter
+mov bl,0 ; counts the '1' bits
+L1: shr eax,1 ; shift into Carry flag
+jnc L2 ; Carry flag set?
+inc bl ; yes: add to bit count
+L2: loop L1 ; continue loop
+; if BL is odd, clear the parity flag
+; if BL is even, set the parity flag
+shr bl,1
+jc odd
+mov bh,0
+or bh,0 ; PF = 1
+jmp next
+odd:
+mov bh,1
+or bh,1 ; PF = 0
+next:

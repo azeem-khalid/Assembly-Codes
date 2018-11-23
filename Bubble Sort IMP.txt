@@ -1,0 +1,46 @@
+include Irvine32.inc
+.data
+userstat DWORD 5,4,3,2,1
+.code
+MAIN PROC
+push OFFSET userstat
+push LENGTHOF userstat
+call BubbleSort
+mov ESI,0
+mov ECX, LENGTHOF userstat
+Loop1:
+mov EAX, userstat[ESI]
+call writeint
+call crlf
+add ESI,4
+loop Loop1
+exit
+MAIN ENDP
+BubbleSort PROC
+push EBP
+mov EBP,ESP
+mov EDX,[ESP+12]
+mov ECX,[ESP+8]
+dec ECX
+push EDX
+push ECX
+cmp ECX,0
+jna Loop4
+mov EAX,0
+Loop2:
+mov EAX,[EDX]
+mov EBX, [EDX+4]
+cmp EAX,EBX
+jnae Loop3
+mov [EDX+4],EAX
+mov [EDX],EBX
+Loop3:
+add EDX,4
+loop Loop2
+call BubbleSort
+Loop4:
+mov ESP,EBP
+pop EBP
+ret 8
+BubbleSort ENDP
+END main

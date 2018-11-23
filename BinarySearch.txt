@@ -1,0 +1,63 @@
+INCLUDE Irvine32.inc
+
+.data
+
+sArray BYTE 1d,2d,3d,4d,5d,6d,7d,8d,9d,10d
+dividend BYTE 2d
+Item BYTE 3d
+
+.code
+	BSearch PROTO,Value: DWORD,ArrayAddress: PTR DWORD,higherIndex: DWORD,lowerIndex:DWORD
+	main PROC
+	movzx EAX,item
+	invoke BSearch,EAX,addr SArray,Lengthof SArray,0
+	exit
+	main ENDP	
+
+
+
+	BSearch PROC,Value: DWORD,ArrayAddress: PTR DWORD,higherIndex: DWORD,lowerIndex:DWORD
+	mov ESI,ArrayAddress
+	mov EAX,lowerIndex
+	add EAX,HigherIndex
+	div Dividend
+	movzx EBX,Al
+	mov EAX,EBX
+	dec EAX
+	add ESI,EAX
+	mov EAX,0
+
+	Check:
+		mov EBX,Value
+		cmp BYTE PTR [ESI],BL
+		je Found
+		jl Greater
+		jg Lesser
+
+	Greater:
+		mov ESI,ArrayAddress
+		mov EAX,lowerIndex
+		add EAX,HigherIndex
+		div Dividend
+		movzx EBX,Al
+		mov EAX,EBX
+		mov lowerIndex,EAX
+		add ESI,EAX
+		jmp Check
+
+	Lesser:
+		mov ESI,ArrayAddress
+		mov EAX,lowerIndex
+		add EAX,HigherIndex
+		div Dividend
+		movzx EBX,Al
+		mov EAX,EBX
+		mov HigherIndex,EAX
+		add ESI,EAX
+		jmp Check
+	Found:
+		call WriteInt
+		ret
+
+	BSearch ENDP
+end main

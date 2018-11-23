@@ -1,0 +1,22 @@
+﻿Build started 10/28/2016 12:08:54 AM.
+     1>Project "c:\Users\Khalid\documents\visual studio 2010\Projects\IQuestion4\IQuestion4\IQuestion4.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\IQuestion4.unsuccessfulbuild".
+       _MASM:
+         Assembling [Inputs]...
+         cmd.exe /C "C:\Users\Khalid\AppData\Local\Temp\tmp7dbe6c13927e4372b33173ef37d0c98e.cmd"
+         ml.exe /c /nologo /Zi /Fo"Debug\Coal8.obj" /Fl".lst" /I "C:\Irvine" /W3 /errorReport:prompt  /TaCoal8.asm
+     1>Coal8.asm(74): error A2022: instruction operands must be the same size
+     1>Coal8.asm(75): error A2022: instruction operands must be the same size
+     1>Coal8.asm(81): error A2022: instruction operands must be the same size
+     1>Coal8.asm(82): error A2022: instruction operands must be the same size
+     1>Coal8.asm(87): error A2022: instruction operands must be the same size
+     1>Coal8.asm(88): error A2022: instruction operands must be the same size
+     1>Coal8.asm(93): error A2022: instruction operands must be the same size
+     1>Coal8.asm(94): error A2022: instruction operands must be the same size
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\BuildCustomizations\masm.targets(49,5): error MSB3721: The command "ml.exe /c /nologo /Zi /Fo"Debug\Coal8.obj" /Fl".lst" /I "C:\Irvine" /W3 /errorReport:prompt  /TaCoal8.asm" exited with code 1.
+     1>Done Building Project "c:\Users\Khalid\documents\visual studio 2010\Projects\IQuestion4\IQuestion4\IQuestion4.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.32

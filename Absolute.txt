@@ -1,0 +1,4 @@
+mov edx,eax ; create a bit mask
+sar edx,31
+add eax,edx
+xor eax,edx

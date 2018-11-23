@@ -1,0 +1,28 @@
+include irvine32.inc
+
+.data
+var1 dword 0d
+var2 dword 1d
+.code
+main PROC
+fibonacci proto,val1:dword,val2:dword,val3:dword
+mov ecx,10
+invoke fibonacci,var1,var2,ecx
+
+exit
+main endp
+
+fibonacci proc,val1:dword,val2:dword,val3:dword
+mov ecx,val3
+l1:
+mov eax,val1
+call writeint
+add eax,val2
+mov ebx,val2
+mov val1,ebx
+mov val2,eax
+loop l1
+ret
+fibonacci endp
+
+end main

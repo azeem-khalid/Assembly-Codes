@@ -1,0 +1,36 @@
+INCLUDE Irvine32.inc
+.data
+myarray DWORD 1,2,3
+rowsize = ($-myarray)/TYPE myarray
+		DWORD 4,5,6
+		DWORD 7,8,9
+.code
+main PROC
+column=2
+mov edi,0
+mov ecx,LENGTHOF myarray
+L1:
+mov esi,0
+push ecx
+mov ecx,rowsize
+L2:
+mov ebx,edi
+add ebx,esi
+mov eax,myarray[ebx]
+mov edx,column
+mul edx
+call writeint
+mov al,' '
+call writechar
+add esi,4
+loop L2
+call crlf
+pop ecx
+mov eax,rowsize
+mov edx,4
+mul edx
+add edi,eax
+loop l1
+exit
+main ENDP
+END main

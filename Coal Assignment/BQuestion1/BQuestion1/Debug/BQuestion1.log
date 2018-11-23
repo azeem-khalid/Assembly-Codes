@@ -1,0 +1,20 @@
+﻿Build started 10/28/2016 12:33:21 AM.
+     1>Project "C:\Users\Khalid\Desktop\Coal Assignment\BQuestion1\BQuestion1\BQuestion1.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\BQuestion1.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       _MASM:
+       Skipping target "_MASM" because all output files are up-to-date with respect to the input files.
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Khalid\Desktop\Coal Assignment\BQuestion1\Debug\BQuestion1.exe" /NOLOGO /LIBPATH:C:\Irvine User32.lib Irvine32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\BQuestion1.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Khalid\Desktop\Coal Assignment\BQuestion1\Debug\BQuestion1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Khalid\Desktop\Coal Assignment\BQuestion1\Debug\BQuestion1.lib" /MACHINE:X86 Debug\Coal1.obj
+         LINK : C:\Users\Khalid\Desktop\Coal Assignment\BQuestion1\Debug\BQuestion1.exe not found or not built by the last incremental link; performing full link
+         BQuestion1.vcxproj -> C:\Users\Khalid\Desktop\Coal Assignment\BQuestion1\Debug\BQuestion1.exe
+       Manifest:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Khalid\Desktop\Coal Assignment\BQuestion1\Debug\BQuestion1.exe;#1" /manifest Debug\BQuestion1.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\BQuestion1.unsuccessfulbuild".
+         Touching "Debug\BQuestion1.lastbuildstate".
+     1>Done Building Project "C:\Users\Khalid\Desktop\Coal Assignment\BQuestion1\BQuestion1\BQuestion1.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.68

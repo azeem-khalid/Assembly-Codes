@@ -1,0 +1,22 @@
+﻿Build started 10/27/2016 11:57:14 PM.
+     1>Project "c:\Users\Khalid\documents\visual studio 2010\Projects\BQuestion4\BQuestion4\BQuestion4.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\BQuestion4.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       _MASM:
+         Assembling [Inputs]...
+         cmd.exe /C "C:\Users\Khalid\AppData\Local\Temp\tmpfb8e3e920d444b8bbb6a155c687fce7a.cmd"
+         ml.exe /c /nologo /Zi /Fo"Debug\Coal4.obj" /Fl".lst" /I "C:\Irvine" /W3 /errorReport:prompt  /TaCoal4.asm
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\khalid\documents\visual studio 2010\Projects\BQuestion4\Debug\BQuestion4.exe" /NOLOGO /LIBPATH:C:\Irvine User32.lib Irvine32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\BQuestion4.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"c:\users\khalid\documents\visual studio 2010\Projects\BQuestion4\Debug\BQuestion4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\khalid\documents\visual studio 2010\Projects\BQuestion4\Debug\BQuestion4.lib" /MACHINE:X86 Debug\Coal4.obj
+         LINK : c:\users\khalid\documents\visual studio 2010\Projects\BQuestion4\Debug\BQuestion4.exe not found or not built by the last incremental link; performing full link
+         BQuestion4.vcxproj -> c:\users\khalid\documents\visual studio 2010\Projects\BQuestion4\Debug\BQuestion4.exe
+       Manifest:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"c:\users\khalid\documents\visual studio 2010\Projects\BQuestion4\Debug\BQuestion4.exe;#1" /manifest Debug\BQuestion4.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\BQuestion4.unsuccessfulbuild".
+         Touching "Debug\BQuestion4.lastbuildstate".
+     1>Done Building Project "c:\Users\Khalid\documents\visual studio 2010\Projects\BQuestion4\BQuestion4\BQuestion4.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.87

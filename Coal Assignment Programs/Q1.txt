@@ -1,0 +1,47 @@
+Include Irvine32.inc
+
+.data
+Values DWORD 3 DUP(?)
+message1	BYTE "Enter First Number: ",0
+message2	BYTE "Enter Second Number: ",0
+message3	BYTE "Enter Third Number: ",0
+.code
+	main PROC
+	mov EAX,0
+	mov EDX,offset message1
+	call WriteString
+	call ReadInt
+	mov Values[0],EAX
+	mov EDX,offset message2
+	call WriteString
+	call ReadInt
+	mov Values[4],EAX
+	mov EDX,offset message3
+	call WriteString
+	call ReadInt
+	mov Values[8],EAX
+	call Smallest
+	call WriteInt
+	exit
+	main ENDP
+
+	Smallest PROC
+	mov ESI,0
+	mov EAX,Values[ESI]
+	mov ECX,2
+	L1:
+		add ESI,Type Values
+		cmp EAX,Values[ESI]
+		ja Swap
+		L2:
+
+	Loop L1
+
+	ret
+
+	Swap :
+		mov EAX,Values[ESI]
+		jmp L2
+	Smallest ENDP
+
+END main

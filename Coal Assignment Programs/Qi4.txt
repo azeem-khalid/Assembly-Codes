@@ -1,0 +1,117 @@
+Include Irvine32.inc
+.data
+XCordinates WORD 3 DUP (?)
+YCordinates WORD 3 DUP (?)
+ZCordinates WORD 3 DUP (?)
+Sides WORD 3 DUP (?)
+msgX BYTE "Enter X ",0
+msgY BYTE "Enter Y ",0
+msgZ BYTE "Enter Z ",0
+Equi BYTE "Equilateral Triangle ",0
+Isos BYTE "Isosceles Triangle ",0
+Scal BYTE "Scalene Triangle ",0
+.code
+	main PROC
+	mov ECX,3
+	mov ESI,0
+	L1:
+		call clrscr
+		mov EAX,0
+		mov EDX,offset msgX
+		call WriteString
+		call ReadInt
+		mov XCordinates[ESI],AX
+		mov EDX,offset msgY
+		call WriteString
+		call ReadInt
+		mov YCordinates[ESI],AX
+		mov EDX,offset msgZ
+		call WriteString
+		call ReadInt
+		mov ZCordinates[ESI],AX
+		add ESI,Type XCordinates
+	Loop L1
+	mov ESI,0
+	mov ECX,2
+	L2:
+		mov EAX,0
+		mov AX,XCordinates[ESI]
+		sub AX,XCordinates[ESI+2]
+		mul EAX
+		mov Sides[ESI],AX
+		movzx EAX,YCordinates[ESI]
+		sub AX,YCordinates[ESI+2]
+		mul EAX
+		add Sides[ESI],AX
+		movzx EAX,ZCordinates[ESI]
+		sub AX,ZCordinates[ESI+2]
+		mul EAX
+		add Sides[ESI],AX
+		add ESI,Type XCordinates
+	Loop L2
+
+		mov EAX,0
+		mov AX,XCordinates[0]
+		sub AX,XCordinates[4]
+		mul EAX
+		mov Sides[4],AX
+		movzx EAX,YCordinates[0]
+		sub AX,YCordinates[4]
+		mul EAX
+		add Sides[4],AX
+		movzx EAX,ZCordinates[0]
+		sub AX,ZCordinates[4]
+		mul EAX
+		add Sides[0],AX
+		movzx EAX,Sides[4]
+		
+	mov ECX,3
+	mov ESI,0
+
+	mov EAX,Sides[0]
+	cmp Sides[2],EAX
+	jz FirstEqual
+	jnz FirstNotEqual
+
+
+	FirstEqual:
+		mov EAX,Sides[2]
+		cmp EAX,Sides[4]
+		jz Equilateral
+		jnz Isosceles
+
+	FirstNotEqual:
+		mov EAX,Sides[2]
+		cmp EAX,Sides[4]
+		jz Isosceles
+		jnz SecondThirdNotEqual
+
+	SecondThirdNotEqual:
+		mov EAX,Sides[0]
+		cmp EAX,Sides[4]
+		jz Isosceles
+		jnz Scalene
+
+	Equilateral:
+		call clrscr
+		mov EDX,offset Equi
+		call WriteString
+		exit
+
+	
+	Isosceles:
+		call clrscr
+		mov EDX,offset Isos
+		call WriteString
+		exit
+
+	Scalene:
+		call clrscr
+		mov EDX,offset Scal
+		call WriteString
+		exit
+
+
+	exit
+	main ENDP
+END Main

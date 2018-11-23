@@ -1,0 +1,15 @@
+﻿Build started 10/28/2016 12:25:24 AM.
+     1>Project "C:\Users\Khalid\Desktop\encryption\encryption\encryption.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\encryption.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       _MASM:
+         Assembling [Inputs]...
+         cmd.exe /C "C:\Users\Khalid\AppData\Local\Temp\tmp19135ce649734199a8dea937fef926db.cmd"
+         ml.exe /c /nologo /Zi /Fo"Debug\Encrypt.obj" /Fl".lst" /I "C:\Irvine" /W3 /errorReport:prompt  /TaEncrypt.asm
+     1>Encrypt.asm(32): error A2006: undefined symbol : buffer
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\BuildCustomizations\masm.targets(49,5): error MSB3721: The command "ml.exe /c /nologo /Zi /Fo"Debug\Encrypt.obj" /Fl".lst" /I "C:\Irvine" /W3 /errorReport:prompt  /TaEncrypt.asm" exited with code 1.
+     1>Done Building Project "C:\Users\Khalid\Desktop\encryption\encryption\encryption.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.75

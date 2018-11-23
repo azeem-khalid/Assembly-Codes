@@ -1,0 +1,17 @@
+﻿Build started 10/28/2016 12:29:55 AM.
+     1>Project "c:\Users\Khalid\documents\visual studio 2010\Projects\IQuestion2\IQuestion2\IQuestion2.vcxproj" on node 2 (build target(s)).
+     1>PrepareForBuild:
+         Creating directory "c:\users\khalid\documents\visual studio 2010\Projects\IQuestion2\Debug\".
+       InitializeBuildStatus:
+         Creating "Debug\IQuestion2.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       _MASM:
+         Assembling [Inputs]...
+         cmd.exe /C "C:\Users\Khalid\AppData\Local\Temp\tmp4e2237cc6dbf436f81653c77a0f6bbe6.cmd"
+         ml.exe /c /nologo /Zi /Fo"Debug\Coal6.obj" /Fl".lst" /I "C:\Irvine" /W3 /errorReport:prompt  /TaCoal6.asm
+     1>Coal6.asm(32): error A2070: invalid instruction operands
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\BuildCustomizations\masm.targets(49,5): error MSB3721: The command "ml.exe /c /nologo /Zi /Fo"Debug\Coal6.obj" /Fl".lst" /I "C:\Irvine" /W3 /errorReport:prompt  /TaCoal6.asm" exited with code 1.
+     1>Done Building Project "c:\Users\Khalid\documents\visual studio 2010\Projects\IQuestion2\IQuestion2\IQuestion2.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.25

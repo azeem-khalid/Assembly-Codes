@@ -1,0 +1,49 @@
+Include Irvine32.inc
+.data
+string1  BYTE 15 DUP(?)
+string2  BYTE "Not Palindrome. ",0
+string3  BYTE "Palindrome. ",0
+lengthString BYTE ?
+stringInput BYTE "Enter String: ",0
+stringPrompt BYTE "String is : ",0
+.code
+	main PROC
+	mov EDX,offset StringInput
+	call WriteString
+	mov EDX,offset string1
+	mov ECX,lengthof string1
+	call ReadString
+	mov CL,Al
+	mov LengthString,Cl
+	mov ESI,0
+	L1:
+		mov EAX,0
+		mov Al,string1[ESI]
+		push EAX
+		inc ESI
+	loop L1
+
+	mov ESI,0
+	mov CL,LengthString
+	L2:
+		pop EAX
+		cmp AL,string1[ESI]
+		jnz nPalindrome
+		inc ESI
+	Loop L2
+
+	mov EDX,offset stringPrompt
+	call WriteString
+	mov EDX,offset string3
+	call WriteString
+	exit
+
+	nPalindrome:
+		mov EDX,offset stringPrompt
+		call WriteString
+		mov EDX,offset string2
+		call WriteString
+
+	exit
+	main ENDP
+END Main

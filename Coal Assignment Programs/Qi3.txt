@@ -1,0 +1,23 @@
+Include Irvine32.inc
+.data
+
+.code
+	main PROC
+	call Randomize
+	
+	MOV ECX,10
+	L1:
+		mov EAX,10
+		call RandomRange
+		push ECX
+		mov ECX,EAX
+		L2:
+			mov AL,'*'
+			call WriteChar
+		Loop L2
+		pop ECX
+		call Crlf
+	Loop L1
+	exit
+	main ENDP
+END Main

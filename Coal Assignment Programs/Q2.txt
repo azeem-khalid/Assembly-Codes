@@ -1,0 +1,26 @@
+Include Irvine32.inc
+
+.data
+Values DWORD 3 DUP(?)
+message1	BYTE " I am a Fastian! ",0
+.code
+	main PROC
+		call clrscr
+		mov EAX,1000
+		call Delay
+		mov ECX,15
+		mov ESI,0
+		mov DH,10
+		mov DL,35
+		L1:
+		call GotoXy
+		mov Al,message1[ESI]
+		call WriteChar
+		mov AL,CL
+		call setTextColor
+		inc ESI
+		inc DL
+		Loop L1
+	exit
+	main ENDP
+END main
